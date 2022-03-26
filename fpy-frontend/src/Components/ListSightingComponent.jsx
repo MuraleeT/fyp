@@ -1,6 +1,7 @@
 import React, { Component, useCallback } from 'react';
 import SightingService from '../services/SightingService';
 import { Link } from 'react-router-dom';
+import HeaderComponent from './HeaderComponent';
 
 class ListSightingComponent extends Component {
 
@@ -26,7 +27,8 @@ class ListSightingComponent extends Component {
     render() {
         return (
             <div>
-                
+                <HeaderComponent />
+
                 <h2 className = "text-center p-4">Sightings</h2>
 
                 <div className = "row">

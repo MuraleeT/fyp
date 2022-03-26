@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import SightingService from '../services/SightingService';
+import HeaderComponent from './HeaderComponent';
 import { BrowserRouter, Route } from 'react-router-dom';
 import {withRouter} from 'react-router-dom'
 
@@ -64,17 +65,18 @@ class CreateSightingComponent extends Component {
     render() {
         return (
             <div>
+                <HeaderComponent />
                 <div className= "container">
                     <div className= "row">
                         <div className= "card col-md-6 offset-md-3">
 
-                            <h2 className = "text-center p-4">Add Sightings</h2>
+                            <h2 className = "text-center pt-5">Add Sightings</h2>
 
                             <div className= "card-body">
 
                                 <form>
                                     <div className = "form-group p-3">
-                                        <label className="py-3">Animal</label> 
+                                        <label>Animal</label> 
                                         <input placeholder = "Animal" name = "animal" className = "form-control" value={this.state.animal} onChange={this.changeAnimalHandler}/>
                                         <label className="py-3">Area</label> 
                                         <input placeholder = "Area" name = "area" className = "form-control" value={this.state.area} onChange={this.changeAreaHandler}/>
